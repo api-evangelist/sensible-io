@@ -1,0 +1,29 @@
+aid: sensible-io
+url: https://raw.githubusercontent.com/api-evangelist/sensible-io/refs/heads/main/apis.yml
+name: Sensible
+x-type: company
+description: >-
+  Sensible is a document understanding platform offering structured extraction from unstructured PDFs and images via configurable extractor templates.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - AI
+  - Document AI
+  - IDP
+  - Extraction
+  - API
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.sensible.so/
+  - type: Plans
+    url: plans/sensible-io-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/sensible-io-rate-limits.yml
+  - type: FinOps
+    url: finops/sensible-io-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
