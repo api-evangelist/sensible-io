@@ -5,20 +5,27 @@ provider: Sensible
 providerId: sensible-io
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Document AI
 - IDP
 - Extraction
-- API
 - FinOps
 - Cost Management
 - FOCUS
-description: FOCUS-aligned FinOps placeholder for Sensible. Pipeline will replace with real billing details.
-notes: Initial scaffold — billing model has not yet been reconciled.
+description: >-
+  FOCUS-aligned FinOps profile for Sensible. Costs are a flat monthly tier fee
+  (Growth $499 / Scale $1,499 / Enterprise custom) plus per-document overage
+  ($0.50/document on Growth/Scale, tiered on Enterprise). Charge is per
+  document — not per page — which makes long documents (up to ~100 pages)
+  highly cost-efficient.
+notes: >-
+  Optimisation focuses on right-sizing the monthly bundle to actual document
+  volume; switching to annual billing for ~10% effective discount; minimising
+  human-review touches on Scale/Enterprise.
 sources:
-- https://www.sensible.so/
+- https://www.sensible.so/pricing
 - https://focus.finops.org/focus-specification/v1-3/
 alignedWith:
   framework: FinOps Foundation Framework
@@ -27,10 +34,10 @@ alignedWith:
   dataSpecVersion: '1.3'
   dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
 publisherName: Sensible
-serviceCategory: AI
+serviceCategory: Document AI
 billingModel:
-  pricingCategory: To Be Reconciled
-  billingFrequency: Monthly
+  pricingCategory: Subscription + Usage (overage)
+  billingFrequency: Monthly / Annual
   billingCurrency: USD
   chargeCategories:
   - Usage
@@ -38,29 +45,51 @@ billingModel:
   - Adjustment
 focusColumns:
   ServiceName: Sensible
-  ServiceCategory: AI
+  ServiceCategory: AI / IDP
   ProviderName: Sensible
   PublisherName: Sensible
   InvoiceIssuerName: Sensible
   BillingCurrency: USD
   ChargeCategory: Usage
+  PricingUnit: document
 meters:
-- name: api_usage
-  description: Catch-all meter pending reconciliation.
-  unit: varies
+- name: plan_subscription
+  description: Flat monthly tier fee.
+  unit: month
   aggregation: sum
   dimensions:
   - account
-  - resource
+  - tier
+- name: documents_processed
+  description: Documents extracted in the billing month.
+  unit: document
+  aggregation: sum
+  dimensions:
+  - account
+  - environment
+  - extractor
+- name: document_overage
+  description: Documents above the included monthly bundle.
+  unit: document
+  aggregation: sum
+  dimensions:
+  - account
+- name: human_review_touches
+  description: Manual review interactions (Scale/Enterprise).
+  unit: review
+  aggregation: sum
+  dimensions:
+  - account
+  - reviewer
 principles:
 - name: Visibility
-  description: Pull provider invoices or usage exports until a self-serve usage feed is documented.
+  description: Use the Sensible portal Usage page; export per-extractor / per-environment counts for chargeback.
 - name: Allocation
-  description: Tag invoice line items to consuming business units in your FinOps store.
+  description: Use environments and extractor naming conventions to map to teams / cost centres.
 - name: Optimization
-  description: Levers depend on the provider's billing model; review at renewal once reconciled.
+  description: Right-size monthly bundle; consolidate similar templates; avoid unnecessary re-runs; switch to annual.
 - name: Accountability
-  description: Assign a contract owner to review billing against negotiated terms.
+  description: Assign extractor owners; alert at 75% of monthly bundle.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

@@ -1,23 +1,59 @@
 aid: sensible-io
+aname: sensible-io
 url: https://raw.githubusercontent.com/api-evangelist/sensible-io/refs/heads/main/apis.yml
 name: Sensible
 x-type: company
 description: >-
-  Sensible is a document understanding platform offering structured extraction from unstructured PDFs and images via configurable extractor templates.
+  Sensible is a developer-focused document understanding platform that
+  converts unstructured documents (PDFs, emails, images) into JSON. The core
+  IP is SenseML — a document-specific query language combining LLM techniques
+  with layout-based rules. The REST API exposes extract, classify, fill,
+  generate and document-management endpoints, with SDKs for Node, Python and
+  Go.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Document AI
   - IDP
   - Extraction
-  - API
+  - LLM
+  - SenseML
+  - PDF
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
-apis: []
+apis:
+  - aid: sensible-io:rest
+    name: Sensible REST API
+    description: >-
+      REST API for document extraction (sync/async, single-document or
+      portfolio), classification, fill, generation and configuration
+      management. Bearer-token auth.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.sensible.so/reference/api-overview
+    baseURL: https://api.sensible.so/v0
+    tags:
+      - REST
+      - Extraction
+      - Classification
+      - LLM
+      - SenseML
+    properties:
+      - type: Documentation
+        url: https://docs.sensible.so/
+      - type: APIReference
+        url: https://docs.sensible.so/reference/api-overview
+      - type: SDK
+        url: https://github.com/sensible-hq
 common:
   - type: Website
     url: https://www.sensible.so/
+  - type: Documentation
+    url: https://docs.sensible.so/
+  - type: Pricing
+    url: https://www.sensible.so/pricing
+  - type: GitHub
+    url: https://github.com/sensible-hq
   - type: Plans
     url: plans/sensible-io-plans-pricing.yml
   - type: RateLimits

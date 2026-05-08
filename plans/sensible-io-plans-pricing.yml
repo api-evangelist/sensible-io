@@ -5,37 +5,136 @@ provider: Sensible
 providerId: sensible-io
 created: '2026-05-08'
 modified: '2026-05-08'
-reconciled: false
+reconciled: true
 tags:
 - AI
 - Document AI
 - IDP
 - Extraction
-- API
 - Plans
-description: Placeholder plans/pricing artifact for Sensible. Replace with real published pricing once
-  the pipeline researches the provider's plans page.
-notes: Initial scaffold — plans/pricing have not yet been reconciled.
+- Pricing
+description: >-
+  Sensible offers three pricing tiers — Growth, Scale and Enterprise — each
+  with a monthly document allotment plus per-document overage. Pricing is
+  billed per-document (not per-page) so multi-page documents cost the same as
+  single-page ones up to ~100 pages.
+notes: >-
+  Annual billing offers ~10% effective discount over monthly. Human review
+  and document splitting are included only on Scale and Enterprise.
 sources:
-- https://www.sensible.so/
+- https://www.sensible.so/pricing
 plans:
-- id: sensible-io-default
-  name: To Be Reconciled
-  type: enterprise
-  description: Initial scaffold; replace with provider plan tiers once pricing is reconciled.
+- id: sensible-growth
+  name: Growth
+  type: subscription
+  description: $499/month (or $449/month annual). 750 documents/month included; $0.50/document overage.
   entries:
-  - label: API Access
-    name: api_access
+  - label: Plan price
+    name: monthly_price
     type: flat
-    metric: varies
+    metric: month
     limit: -1
-    timeFrame: usage
+    timeFrame: month
     geo: global
     unit: 1
-    price: see https://www.sensible.so/
+    price: 499
+    currency: USD
     userMultiplied: false
-  elements:
-  - name: Pending Reconciliation
+  - label: Annual price
+    name: annual_monthly_price
+    type: flat
+    metric: month
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 449
+    currency: USD
+    userMultiplied: false
+  - label: Included documents
+    name: included_documents
+    type: tier
+    metric: documents/month
+    limit: 750
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0
+    userMultiplied: false
+  - label: Document overage
+    name: document_overage
+    type: usage
+    metric: document
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0.50
+    currency: USD
+    userMultiplied: false
+- id: sensible-scale
+  name: Scale
+  type: subscription
+  description: $1,499/month (or $1,349/month annual). 3,200 documents/month; $0.50/document overage; human review and document splitting.
+  entries:
+  - label: Plan price
+    name: monthly_price
+    type: flat
+    metric: month
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 1499
+    currency: USD
+    userMultiplied: false
+  - label: Annual price
+    name: annual_monthly_price
+    type: flat
+    metric: month
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 1349
+    currency: USD
+    userMultiplied: false
+  - label: Included documents
+    name: included_documents
+    type: tier
+    metric: documents/month
+    limit: 3200
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0
+    userMultiplied: false
+  - label: Document overage
+    name: document_overage
+    type: usage
+    metric: document
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: 0.50
+    currency: USD
+    userMultiplied: false
+- id: sensible-enterprise
+  name: Enterprise
+  type: enterprise
+  description: Custom pricing for 10,000+ documents/month; tiered overage rates; white-glove enablement; dedicated support.
+  entries:
+  - label: Custom contract
+    name: enterprise_contract
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: annual
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

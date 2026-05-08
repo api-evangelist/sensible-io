@@ -11,25 +11,43 @@ tags:
 - Document AI
 - IDP
 - Extraction
-- API
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for Sensible. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: >-
+  Sensible's primary throttle is the per-plan monthly document allotment;
+  documents above the bundle are billed at $0.50 per document overage on
+  Growth/Scale tiers (Enterprise has tiered overage). API request-level
+  numeric per-second limits are not publicly published.
+notes: >-
+  Processing latency is typically 6 seconds to 1 minute per document.
+  Documents above ~100 pages may be priced separately under per-page
+  contracts. Reconciled flagged false until per-second rate ceiling is
+  publicly documented.
 sources:
-- https://www.sensible.so/
+- https://docs.sensible.so/reference/api-overview
+- https://www.sensible.so/pricing
 responseCodes:
   throttled: 429
 limits:
-- name: Default
+- name: REST API requests
+  scope: api_token
+  metric: requests
+  limit: see Sensible docs
+  notes: Per-token throttle; 429 with Retry-After.
+- name: Growth plan documents/month
   scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+  metric: documents/month
+  limit: 750
+- name: Scale plan documents/month
+  scope: account
+  metric: documents/month
+  limit: 3200
 policies:
+- name: Async Extraction
+  description: Use async extraction endpoints for large portfolios; poll the document state until completion.
 - name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
+  description: Honor 429 with Retry-After; use exponential backoff with jitter.
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
