@@ -2,7 +2,7 @@ aid: sensible-io
 aname: sensible-io
 url: https://raw.githubusercontent.com/api-evangelist/sensible-io/refs/heads/main/apis.yml
 name: Sensible
-x-type: company
+kind: company
 description: >-
   Sensible is a developer-focused document understanding platform that
   converts unstructured documents (PDFs, emails, images) into JSON. The core
