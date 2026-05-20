@@ -46,6 +46,8 @@ apis:
       - type: SDK
         url: https://github.com/sensible-hq
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/sensible-io
   - type: Website
     url: https://www.sensible.so/
   - type: Documentation
