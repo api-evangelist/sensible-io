@@ -10,7 +10,7 @@ description: >-
   with layout-based rules. The REST API exposes extract, classify, fill,
   generate and document-management endpoints, with SDKs for Node, Python and
   Go.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - AI
   - Document AI
@@ -29,7 +29,7 @@ apis:
       REST API for document extraction (sync/async, single-document or
       portfolio), classification, fill, generation and configuration
       management. Bearer-token auth.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.sensible.so/reference/api-overview
     baseURL: https://api.sensible.so/v0
     tags:
