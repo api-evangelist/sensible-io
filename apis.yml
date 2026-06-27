@@ -43,7 +43,7 @@ apis:
         url: https://docs.sensible.so/
       - type: APIReference
         url: https://docs.sensible.so/reference/api-overview
-      - type: SDK
+      - type: SDKs
         url: https://github.com/sensible-hq
 common:
   - type: LinkedIn
@@ -62,7 +62,7 @@ common:
     url: rate-limits/sensible-io-rate-limits.yml
   - type: FinOps
     url: finops/sensible-io-finops.yml
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.sensible.so/llms.txt
 maintainers:
   - FN: Kin Lane
