@@ -1,0 +1,98 @@
+openapi: 3.1.0
+info:
+  title: Sensible REST Account Reference Documents API
+  description: 'REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).'
+  version: '0'
+  contact:
+    name: Sensible
+    url: https://docs.sensible.so/
+servers:
+- url: https://api.sensible.so/v0
+  description: Sensible production API
+security:
+- bearerAuth: []
+tags:
+- name: Reference Documents
+  description: Manage reference documents per type
+paths:
+  /document_types/{type_id}/reference_documents:
+    parameters:
+    - $ref: '#/components/parameters/TypeId'
+    get:
+      tags:
+      - Reference Documents
+      summary: List reference documents for a document type
+      operationId: listReferenceDocuments
+      responses:
+        '200':
+          description: Array of reference documents
+    post:
+      tags:
+      - Reference Documents
+      summary: Create a reference document
+      operationId: createReferenceDocument
+      responses:
+        '201':
+          description: Created reference document
+  /document_types/{type_id}/reference_documents/{id}:
+    parameters:
+    - $ref: '#/components/parameters/TypeId'
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Reference Documents
+      summary: Retrieve a reference document
+      operationId: getReferenceDocument
+      responses:
+        '200':
+          description: Reference document
+    put:
+      tags:
+      - Reference Documents
+      summary: Update a reference document
+      operationId: updateReferenceDocument
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags:
+      - Reference Documents
+      summary: Delete a reference document
+      operationId: deleteReferenceDocument
+      responses:
+        '204':
+          description: Deleted
+  /document_types/{type_id}/reference_documents/{id}/extract_all_text:
+    parameters:
+    - $ref: '#/components/parameters/TypeId'
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Reference Documents
+      summary: Extract all text from a reference document
+      operationId: extractAllTextReferenceDocument
+      responses:
+        '200':
+          description: Extracted text
+components:
+  parameters:
+    TypeId:
+      in: path
+      name: type_id
+      required: true
+      schema:
+        type: string
+      description: Document type ID
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key

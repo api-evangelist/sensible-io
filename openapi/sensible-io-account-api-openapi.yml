@@ -1,0 +1,32 @@
+openapi: 3.1.0
+info:
+  title: Sensible REST Account API
+  description: 'REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).'
+  version: '0'
+  contact:
+    name: Sensible
+    url: https://docs.sensible.so/
+servers:
+- url: https://api.sensible.so/v0
+  description: Sensible production API
+security:
+- bearerAuth: []
+tags:
+- name: Account
+  description: Account-related resources
+paths:
+  /account/auth_tokens:
+    get:
+      tags:
+      - Account
+      summary: List account auth tokens
+      operationId: listAuthTokens
+      responses:
+        '200':
+          description: Array of tokens
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key

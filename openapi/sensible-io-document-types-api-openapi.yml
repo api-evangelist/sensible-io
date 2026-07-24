@@ -1,0 +1,80 @@
+openapi: 3.1.0
+info:
+  title: Sensible REST Account Document Types API
+  description: 'REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).'
+  version: '0'
+  contact:
+    name: Sensible
+    url: https://docs.sensible.so/
+servers:
+- url: https://api.sensible.so/v0
+  description: Sensible production API
+security:
+- bearerAuth: []
+tags:
+- name: Document Types
+  description: Manage document types
+paths:
+  /document_types:
+    get:
+      tags:
+      - Document Types
+      summary: List document types
+      operationId: listDocumentTypes
+      responses:
+        '200':
+          description: Array of document types
+    post:
+      tags:
+      - Document Types
+      summary: Create a document type
+      operationId: createDocumentType
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+      responses:
+        '201':
+          description: Created document type
+  /document_types/{id}:
+    parameters:
+    - in: path
+      name: id
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Document Types
+      summary: Retrieve a document type
+      operationId: getDocumentType
+      responses:
+        '200':
+          description: Document type
+    put:
+      tags:
+      - Document Types
+      summary: Update a document type
+      operationId: updateDocumentType
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags:
+      - Document Types
+      summary: Delete a document type
+      operationId: deleteDocumentType
+      responses:
+        '204':
+          description: Deleted
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key

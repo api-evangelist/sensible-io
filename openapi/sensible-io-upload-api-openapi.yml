@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: Sensible REST Account Upload API
+  description: 'REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).'
+  version: '0'
+  contact:
+    name: Sensible
+    url: https://docs.sensible.so/
+servers:
+- url: https://api.sensible.so/v0
+  description: Sensible production API
+security:
+- bearerAuth: []
+tags:
+- name: Upload
+  description: Generate upload URLs for documents
+paths:
+  /generate_upload_url/{document_type}:
+    post:
+      tags:
+      - Upload
+      summary: Generate an upload URL for a document
+      operationId: generateUploadUrl
+      parameters:
+      - $ref: '#/components/parameters/DocumentType'
+      responses:
+        '200':
+          description: Upload URL response
+  /generate_upload_url/{document_type}/{config_name}:
+    post:
+      tags:
+      - Upload
+      summary: Generate an upload URL for a document with a specific config
+      operationId: generateUploadUrlWithConfig
+      parameters:
+      - $ref: '#/components/parameters/DocumentType'
+      - $ref: '#/components/parameters/ConfigName'
+      responses:
+        '200':
+          description: Upload URL response
+components:
+  parameters:
+    ConfigName:
+      in: path
+      name: config_name
+      required: true
+      schema:
+        type: string
+      description: Config name
+    DocumentType:
+      in: path
+      name: document_type
+      required: true
+      schema:
+        type: string
+      description: Document type identifier
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key

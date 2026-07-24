@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: Sensible REST Account Documents API
+  description: 'REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).'
+  version: '0'
+  contact:
+    name: Sensible
+    url: https://docs.sensible.so/
+servers:
+- url: https://api.sensible.so/v0
+  description: Sensible production API
+security:
+- bearerAuth: []
+tags:
+- name: Documents
+  description: Retrieve documents and extractions
+paths:
+  /documents:
+    get:
+      tags:
+      - Documents
+      summary: List documents
+      operationId: listDocuments
+      responses:
+        '200':
+          description: Array of documents
+  /documents/{id}:
+    get:
+      tags:
+      - Documents
+      summary: Retrieve a document
+      operationId: getDocument
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Document
+  /extractions/{id}:
+    put:
+      tags:
+      - Documents
+      summary: Update an extraction
+      operationId: updateExtraction
+      parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Updated extraction
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key

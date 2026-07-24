@@ -1,0 +1,139 @@
+openapi: 3.1.0
+info:
+  title: Sensible REST Account Configs API
+  description: 'REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).'
+  version: '0'
+  contact:
+    name: Sensible
+    url: https://docs.sensible.so/
+servers:
+- url: https://api.sensible.so/v0
+  description: Sensible production API
+security:
+- bearerAuth: []
+tags:
+- name: Configs
+  description: Manage document type configs (SenseML)
+paths:
+  /document_types/{type_id}/configs:
+    parameters:
+    - $ref: '#/components/parameters/TypeId'
+    get:
+      tags:
+      - Configs
+      summary: List configs for a document type
+      operationId: listConfigs
+      responses:
+        '200':
+          description: Array of configs
+    post:
+      tags:
+      - Configs
+      summary: Create a config for a document type
+      operationId: createConfig
+      responses:
+        '201':
+          description: Created config
+  /document_types/{type_id}/configs/{name}:
+    parameters:
+    - $ref: '#/components/parameters/TypeId'
+    - $ref: '#/components/parameters/ConfigNamePath'
+    get:
+      tags:
+      - Configs
+      summary: Retrieve a config
+      operationId: getConfig
+      responses:
+        '200':
+          description: Config
+    put:
+      tags:
+      - Configs
+      summary: Update a config
+      operationId: updateConfig
+      responses:
+        '200':
+          description: Updated
+    delete:
+      tags:
+      - Configs
+      summary: Delete a config
+      operationId: deleteConfig
+      responses:
+        '204':
+          description: Deleted
+  /document_types/{type_id}/configs/{name}/versions:
+    parameters:
+    - $ref: '#/components/parameters/TypeId'
+    - $ref: '#/components/parameters/ConfigNamePath'
+    get:
+      tags:
+      - Configs
+      summary: List versions of a config
+      operationId: listConfigVersions
+      responses:
+        '200':
+          description: Array of versions
+  /document_types/{type_id}/configs/{name}/versions/{version}:
+    parameters:
+    - $ref: '#/components/parameters/TypeId'
+    - $ref: '#/components/parameters/ConfigNamePath'
+    - in: path
+      name: version
+      required: true
+      schema:
+        type: string
+    get:
+      tags:
+      - Configs
+      summary: Retrieve a specific config version
+      operationId: getConfigVersion
+      responses:
+        '200':
+          description: Config version
+    delete:
+      tags:
+      - Configs
+      summary: Delete a specific config version
+      operationId: deleteConfigVersion
+      responses:
+        '204':
+          description: Deleted
+  /document_types/{type_id}/configs/{name}/versions/{version}/publish:
+    parameters:
+    - $ref: '#/components/parameters/TypeId'
+    - $ref: '#/components/parameters/ConfigNamePath'
+    - in: path
+      name: version
+      required: true
+      schema:
+        type: string
+    put:
+      tags:
+      - Configs
+      summary: Publish a config version
+      operationId: publishConfigVersion
+      responses:
+        '200':
+          description: Published
+components:
+  parameters:
+    ConfigNamePath:
+      in: path
+      name: name
+      required: true
+      schema:
+        type: string
+      description: Config name
+    TypeId:
+      in: path
+      name: type_id
+      required: true
+      schema:
+        type: string
+      description: Document type ID
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key

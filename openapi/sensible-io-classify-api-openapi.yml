@@ -1,0 +1,64 @@
+openapi: 3.1.0
+info:
+  title: Sensible REST Account Classify API
+  description: 'REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).'
+  version: '0'
+  contact:
+    name: Sensible
+    url: https://docs.sensible.so/
+servers:
+- url: https://api.sensible.so/v0
+  description: Sensible production API
+security:
+- bearerAuth: []
+tags:
+- name: Classify
+  description: Document type classification
+paths:
+  /classify_document:
+    post:
+      tags:
+      - Classify
+      summary: Submit a document for asynchronous classification
+      operationId: classifyDocument
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClassifyRequest'
+      responses:
+        '200':
+          description: Classification job accepted
+  /classify_document_sync:
+    post:
+      tags:
+      - Classify
+      summary: Synchronously classify a document
+      operationId: classifyDocumentSync
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClassifyRequest'
+      responses:
+        '200':
+          description: Classification result
+components:
+  schemas:
+    ClassifyRequest:
+      type: object
+      properties:
+        document_url:
+          type: string
+          format: uri
+        types:
+          type: array
+          items:
+            type: string
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: API Key
