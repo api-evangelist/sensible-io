@@ -10,7 +10,20 @@ description: >-
   with layout-based rules. The REST API exposes extract, classify, fill,
   generate and document-management endpoints, with SDKs for Node, Python and
   Go.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sensible-io.png
 tags:
   - AI
   - Document AI
@@ -23,28 +36,107 @@ created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-  - aid: sensible-io:rest
-    name: Sensible REST API
-    description: >-
-      REST API for document extraction (sync/async, single-document or
-      portfolio), classification, fill, generation and configuration
-      management. Bearer-token auth.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://docs.sensible.so/reference/api-overview
-    baseURL: https://api.sensible.so/v0
-    tags:
-      - REST
-      - Extraction
-      - Classification
-      - LLM
-      - SenseML
-    properties:
-      - type: Documentation
-        url: https://docs.sensible.so/
-      - type: APIReference
-        url: https://docs.sensible.so/reference/api-overview
-      - type: SDKs
-        url: https://github.com/sensible-hq
+- aid: sensible-io:rest
+  name: Sensible REST API
+  description: >-
+    REST API for document extraction (sync/async, single-document or portfolio), classification, fill,
+    generation and configuration management. Bearer-token auth.
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - REST
+  - Extraction
+  - Classification
+  - LLM
+  - SenseML
+  properties:
+  - type: Documentation
+    url: https://docs.sensible.so/
+  - type: APIReference
+    url: https://docs.sensible.so/reference/api-overview
+  - type: SDKs
+    url: https://github.com/sensible-hq
+- aid: sensible-io:sensible-io-account-api
+  name: Sensible Account API
+  description: Account-related resources
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - Account
+  properties:
+  - type: OpenAPI
+    url: openapi/sensible-io-account-api-openapi.yml
+- aid: sensible-io:sensible-io-classify-api
+  name: Sensible Classify API
+  description: Document type classification
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - Classify
+  properties:
+  - type: OpenAPI
+    url: openapi/sensible-io-classify-api-openapi.yml
+- aid: sensible-io:sensible-io-configs-api
+  name: Sensible Configs API
+  description: Manage document type configs (SenseML)
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - Configs
+  properties:
+  - type: OpenAPI
+    url: openapi/sensible-io-configs-api-openapi.yml
+- aid: sensible-io:sensible-io-document-types-api
+  name: Sensible Document Types API
+  description: Manage document types
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - Document Types
+  properties:
+  - type: OpenAPI
+    url: openapi/sensible-io-document-types-api-openapi.yml
+- aid: sensible-io:sensible-io-documents-api
+  name: Sensible Documents API
+  description: Retrieve documents and extractions
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - Documents
+  properties:
+  - type: OpenAPI
+    url: openapi/sensible-io-documents-api-openapi.yml
+- aid: sensible-io:sensible-io-extract-api
+  name: Sensible Extract API
+  description: Document data extraction
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - Extract
+  properties:
+  - type: OpenAPI
+    url: openapi/sensible-io-extract-api-openapi.yml
+- aid: sensible-io:sensible-io-reference-documents-api
+  name: Sensible Reference Documents API
+  description: Manage reference documents per type
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - Reference Documents
+  properties:
+  - type: OpenAPI
+    url: openapi/sensible-io-reference-documents-api-openapi.yml
+- aid: sensible-io:sensible-io-upload-api
+  name: Sensible Upload API
+  description: Generate upload URLs for documents
+  humanURL: https://docs.sensible.so/reference/api-overview
+  baseURL: https://api.sensible.so/v0
+  tags:
+  - Upload
+  properties:
+  - type: OpenAPI
+    url: openapi/sensible-io-upload-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/sensible-io-agentic-access.yml
