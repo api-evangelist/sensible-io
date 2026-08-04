@@ -1,0 +1,28 @@
+{
+  "provider": "sensible-io",
+  "sources": [
+    "sensible-io-account-api-openapi.yml",
+    "sensible-io-classify-api-openapi.yml",
+    "sensible-io-configs-api-openapi.yml",
+    "sensible-io-document-types-api-openapi.yml",
+    "sensible-io-documents-api-openapi.yml",
+    "sensible-io-extract-api-openapi.yml",
+    "sensible-io-reference-documents-api-openapi.yml",
+    "sensible-io-upload-api-openapi.yml"
+  ],
+  "outputs": [
+    "sensible-io-account-api-openapi.yml",
+    "sensible-io-classify-api-openapi.yml",
+    "sensible-io-configs-api-openapi.yml",
+    "sensible-io-document-types-api-openapi.yml",
+    "sensible-io-documents-api-openapi.yml",
+    "sensible-io-extract-api-openapi.yml",
+    "sensible-io-reference-documents-api-openapi.yml",
+    "sensible-io-upload-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
