@@ -1,0 +1,252 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sensible REST Account Configs API",
+    "version": "0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Configs",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List configs for a document type",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              }
+            ]
+          },
+          "docs": "List configs for a document type"
+        },
+        {
+          "info": {
+            "name": "Create a config for a document type",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              }
+            ]
+          },
+          "docs": "Create a config for a document type"
+        },
+        {
+          "info": {
+            "name": "Retrieve a config",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs/:name",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              }
+            ]
+          },
+          "docs": "Retrieve a config"
+        },
+        {
+          "info": {
+            "name": "Update a config",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs/:name",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              }
+            ]
+          },
+          "docs": "Update a config"
+        },
+        {
+          "info": {
+            "name": "Delete a config",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs/:name",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              }
+            ]
+          },
+          "docs": "Delete a config"
+        },
+        {
+          "info": {
+            "name": "List versions of a config",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs/:name/versions",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              }
+            ]
+          },
+          "docs": "List versions of a config"
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific config version",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs/:name/versions/:version",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific config version"
+        },
+        {
+          "info": {
+            "name": "Delete a specific config version",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs/:name/versions/:version",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a specific config version"
+        },
+        {
+          "info": {
+            "name": "Publish a config version",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/configs/:name/versions/:version/publish",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Publish a config version"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

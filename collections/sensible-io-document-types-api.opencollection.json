@@ -1,0 +1,104 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sensible REST Account Document Types API",
+    "version": "0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Document Types",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List document types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types"
+          },
+          "docs": "List document types"
+        },
+        {
+          "info": {
+            "name": "Create a document type",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/document_types",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a document type"
+        },
+        {
+          "info": {
+            "name": "Retrieve a document type",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a document type"
+        },
+        {
+          "info": {
+            "name": "Update a document type",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.sensible.so/v0/document_types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a document type"
+        },
+        {
+          "info": {
+            "name": "Delete a document type",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.sensible.so/v0/document_types/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a document type"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

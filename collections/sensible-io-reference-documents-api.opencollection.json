@@ -1,0 +1,158 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sensible REST Account Reference Documents API",
+    "version": "0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Reference Documents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List reference documents for a document type",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/reference_documents",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              }
+            ]
+          },
+          "docs": "List reference documents for a document type"
+        },
+        {
+          "info": {
+            "name": "Create a reference document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/reference_documents",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              }
+            ]
+          },
+          "docs": "Create a reference document"
+        },
+        {
+          "info": {
+            "name": "Retrieve a reference document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/reference_documents/:id",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a reference document"
+        },
+        {
+          "info": {
+            "name": "Update a reference document",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/reference_documents/:id",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update a reference document"
+        },
+        {
+          "info": {
+            "name": "Delete a reference document",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/reference_documents/:id",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a reference document"
+        },
+        {
+          "info": {
+            "name": "Extract all text from a reference document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/document_types/:type_id/reference_documents/:id/extract_all_text",
+            "params": [
+              {
+                "name": "type_id",
+                "value": "",
+                "type": "path",
+                "description": "Document type ID"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Extract all text from a reference document"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

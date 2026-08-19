@@ -1,0 +1,71 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sensible REST Account Documents API",
+    "version": "0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Documents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List documents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/documents"
+          },
+          "docs": "List documents"
+        },
+        {
+          "info": {
+            "name": "Retrieve a document",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.sensible.so/v0/documents/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a document"
+        },
+        {
+          "info": {
+            "name": "Update an extraction",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.sensible.so/v0/extractions/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an extraction"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

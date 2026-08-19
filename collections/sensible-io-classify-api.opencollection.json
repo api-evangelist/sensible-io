@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sensible REST Account Classify API",
+    "version": "0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Classify",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Submit a document for asynchronous classification",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/classify_document",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit a document for asynchronous classification"
+        },
+        {
+          "info": {
+            "name": "Synchronously classify a document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/classify_document_sync",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Synchronously classify a document"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

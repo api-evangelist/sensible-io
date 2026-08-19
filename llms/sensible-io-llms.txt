@@ -1,0 +1,202 @@
+# Sensible Documentation
+
+> Transform documents into structured data. Sensible is the developer-first platform that makes accessing the data in documents as easy as calling an API. Avoid the PDF parsing headaches with Sensible Instruct – just describe the data you want to extract, and integrate it into your workflow or system. Augment Sensible Instruct with SenseML to maintain full control and visibility over your data extraction.
+
+## Guides
+- [Overview](https://docs.sensible.so/docs/overview.md): Introduction to Sensible and its capabilities for document data extraction
+- [Getting started](https://docs.sensible.so/docs/getting-started-ai.md): Learn to extract document data using LLM-based methods
+- [Integrating](https://docs.sensible.so/docs/integrate.md): Options for integrating Sensible with your application
+- [Quality control](https://docs.sensible.so/docs/quality-control.md): Strategies for validating and monitoring extracted data
+- [Choosing an extraction approach](https://docs.sensible.so/docs/author.md): Guide to choosing between LLM-based and layout-based extraction methods
+- [SDK guides](https://docs.sensible.so/docs/sdk-guides.md): Guides for Node/TypeScript and Python SDKs
+- [Zapier overview](https://docs.sensible.so/docs/zapier.md): Introduction to Sensible's Zapier integration
+- [Integrate with Airtable using Zapier](https://docs.sensible.so/docs/zapier-getting-started.md): Get started with Zapier by learning to integrate Sensible and Airtable for sample 1040 tax forms
+- [Integrate with Slack and Google Sheets using Zapier](https://docs.sensible.so/docs/zapier-tutorial-2.md): integrate Sensible with Slack and Google Drive using Zapier, using 1040 tax form example documents
+- [API quickstart](https://docs.sensible.so/docs/quickstart.md): Quick start guide for the Sensible API
+- [Quick extraction](https://docs.sensible.so/docs/quick-extraction.md): Learn how to use Sensible app's Extract tab to upload documents in bulk and download extracted data as Excel files for custom or supported document types.
+- [SenseML to spreadsheet reference](https://docs.sensible.so/docs/excel-reference.md): Learn how SenseML converts PDF and document data into structured spreadsheets with meaningful column/row relationships.
+- [Getting started with email extraction](https://docs.sensible.so/docs/getting-started-email.md): Extract structured data from emails and attachments
+- [QuickBooks integration](https://docs.sensible.so/docs/quickbooks.md): Extract invoices into QuickBooks Online as bills with Python and Sensible
+- [Getting started with layout-based extractions](https://docs.sensible.so/docs/getting-started.md): Tutorial for SenseML layout-based extraction
+- [Out-of-the-box extractions](https://docs.sensible.so/docs/library-quickstart.md): Pre-built extraction templates for different document types
+- [Multi-document extractions](https://docs.sensible.so/docs/portfolio.md): Segment and extract from document portfolio files (files containing multiple documents)
+- [Repeating layouts](https://docs.sensible.so/docs/repeat-layouts.md): Handle documents with repeating sections
+- [Best practices](https://docs.sensible.so/docs/best-practices.md): Guidelines for production-quality extractions
+- [Extracting handwriting and OCR text](https://docs.sensible.so/docs/handwriting.md): Best practices for OCR and handwriting extraction
+- [Fallback LLM configs](https://docs.sensible.so/docs/fallback-configs.md): Configuring fallback extraction strategies
+- [Go-live checklist](https://docs.sensible.so/docs/go-live.md): Checklist for deploying extractions to production
+- [Handling document variations](https://docs.sensible.so/docs/document-variations.md): Strategies for handling document layout variations
+- [Optimizing extraction performance](https://docs.sensible.so/docs/performance.md): Tips for improving extraction speed
+- [Qualifying LLM accuracy](https://docs.sensible.so/docs/confidence.md): Measuring and improving LLM extraction accuracy
+- [Troubleshooting](https://docs.sensible.so/docs/troubleshoot.md): Common issues and solutions
+- [Monitoring extraction metrics](https://docs.sensible.so/docs/metrics.md): Track extraction performance and accuracy
+- [Validating extractions](https://docs.sensible.so/docs/validate-extractions.md): Validate extracted data programmatically
+- [Human review](https://docs.sensible.so/docs/human-review.md): Set up human review workflows
+- [Human review implementation](https://docs.sensible.so/docs/human-review-implementation.md): Implement human review using Sensible webhooks
+- [Classifying documents by type](https://docs.sensible.so/docs/classify.md): Automatically classify documents by type, for example, 'bank statement' or 'driver's license
+- [API tutorial](https://docs.sensible.so/docs/api-tutorial.md): Step-by-step API tutorial
+- [Try synchronous extraction](https://docs.sensible.so/docs/api-tutorial-sync.md): Synchronous extraction API calls
+- [Try asynchronous extraction from your URL](https://docs.sensible.so/docs/api-tutorial-async-1.md): Async extraction with your document URL
+- [Try asynchronous extraction from a Sensible URL](https://docs.sensible.so/docs/api-tutorial-async-2.md): Async extraction with Sensible-hosted URL
+- [Try a webhook](https://docs.sensible.so/docs/api-tutorial-webhook.md): Webhook-based extraction workflow
+- [Code examples](https://docs.sensible.so/docs/examples.md): Example code for common API operations
+- [API reference](https://docs.sensible.so/docs/api-reference.md): Complete API reference documentation
+- [SenseML reference introduction](https://docs.sensible.so/docs/senseml-reference-introduction.md): Overview of the SenseML query language
+- [Field query object](https://docs.sensible.so/docs/field-query-object.md): Structure of field queries in SenseML
+- [Anchor object](https://docs.sensible.so/docs/anchor.md): Define anchors to locate data in documents
+- [Match object](https://docs.sensible.so/docs/match.md): Match patterns for finding text
+- [Method object](https://docs.sensible.so/docs/method.md): Extraction methods for retrieving data
+- [Types](https://docs.sensible.so/docs/types.md): Data types for extracted fields
+- [Layout-based methods](https://docs.sensible.so/docs/layout-based-methods.md): Methods that use document layout for document data extraction
+- [Box](https://docs.sensible.so/docs/box.md): Extract text from a bordered box
+- [Checkbox](https://docs.sensible.so/docs/checkbox.md): Extract checkbox states
+- [Column](https://docs.sensible.so/docs/column.md): Extract columnar data
+- [Document range](https://docs.sensible.so/docs/document-range.md): Extract text from a document range defined by upper and lower bounds
+- [Fixed table](https://docs.sensible.so/docs/fixed-table.md): Extract tables with fixed column headings
+- [Intersection](https://docs.sensible.so/docs/intersection.md): Find text at row/column intersections
+- [Label](https://docs.sensible.so/docs/label.md): Extract labeled values. Note this method is brittle, so use alternative methods where possible
+- [Nearest checkbox](https://docs.sensible.so/docs/nearest-checkbox.md): Find nearest checkbox to anchor and extract its state
+- [Paragraph](https://docs.sensible.so/docs/paragraph.md): Extract paragraph text
+- [Passthrough](https://docs.sensible.so/docs/passthrough.md): Pass anchor text through as output
+- [Regex](https://docs.sensible.so/docs/regex.md): Extract using regular expressions
+- [Region](https://docs.sensible.so/docs/region.md): Extract from a  rectangular region defined in inch coordinates
+- [Row](https://docs.sensible.so/docs/row.md): Extract row data
+- [Signature](https://docs.sensible.so/docs/signature.md): Detect signatures
+- [Text Table](https://docs.sensible.so/docs/text-table.md): Extract tables based on column coordinates defined in inches
+- [LLM-based methods](https://docs.sensible.so/docs/llm-based-methods.md): Methods that use large language models for document data extraction
+- [List](https://docs.sensible.so/docs/list.md): Extract lists using LLMs
+- [NLP table](https://docs.sensible.so/docs/nlp-table.md): Extract tables using natural language
+- [Query group](https://docs.sensible.so/docs/query-group.md): Group related LLM queries to extract facts
+- [Preprocessors](https://docs.sensible.so/docs/preprocessors.md): Transform documents before extraction
+- [Deskew](https://docs.sensible.so/docs/deskew.md): Correct skewed document images
+- [Ligature](https://docs.sensible.so/docs/ligature.md): Handle ligature characters
+- [Linearize](https://docs.sensible.so/docs/linearize.md): Advanced option for handling block layout and multicolumn layouts, alternative to Multicolumn preprocessor
+- [Merge lines](https://docs.sensible.so/docs/merge-lines.md): Merge split text lines
+- [Multicolumn](https://docs.sensible.so/docs/multicolumn.md): Handle multi-column layouts
+- [NLP](https://docs.sensible.so/docs/nlp.md): Configure LLM methods globally
+- [OCR preprocessor](https://docs.sensible.so/docs/ocr-preprocessor.md): OCR configuration
+- [Page range](https://docs.sensible.so/docs/page-range.md): Limit extraction to page ranges
+- [Remove footer](https://docs.sensible.so/docs/remove-footer.md): Remove page footers
+- [Remove header](https://docs.sensible.so/docs/remove-header.md): Remove page headers
+- [Remove page](https://docs.sensible.so/docs/remove-page.md): Remove specific pages
+- [Rotate page](https://docs.sensible.so/docs/rotate-page.md): Rotate page orientation, for edge cases when Sensible can't auto-rotate the page
+- [Scale](https://docs.sensible.so/docs/scale.md): Scale document dimensions
+- [Split lines](https://docs.sensible.so/docs/split-lines.md): Split merged text lines
+- [Remove lines](https://docs.sensible.so/docs/remove-lines.md): Remove lines matching a pattern from all pages in a document
+- [Computed field methods](https://docs.sensible.so/docs/computed-field-methods.md): Transform extracted data
+- [Concatenate](https://docs.sensible.so/docs/concatenate.md): Join field values
+- [Constant](https://docs.sensible.so/docs/constant.md): Add constant values
+- [Mapper](https://docs.sensible.so/docs/mapper.md): Map values to new values
+- [Pick values](https://docs.sensible.so/docs/pick-values.md): Select values from arrays
+- [Split](https://docs.sensible.so/docs/split.md): Split field values
+- [Suppress output](https://docs.sensible.so/docs/suppress-output.md): Exclude fields from output
+- [Zip](https://docs.sensible.so/docs/zip.md): Combine arrays into objects
+- [Sections](https://docs.sensible.so/docs/sections.md): Extract repeating document sections
+- [Claims loss run example](https://docs.sensible.so/docs/sections-example-loss-run.md): Sections example: insurance claims extraction
+- [Labeled rows example](https://docs.sensible.so/docs/sections-example-labeled-rows.md): Sections example: labeled row extraction
+- [Advanced: nested columns example](https://docs.sensible.so/docs/sections-example-nested-columns.md): Sections example: nested column extraction
+- [Advanced: nested table example](https://docs.sensible.so/docs/sections-example-nested-table.md): Sections example: nested table extraction
+- [Advanced: Table grid example](https://docs.sensible.so/docs/sections-example-table-grid.md): Sections example: table grid extraction
+- [Advanced: Zip sections](https://docs.sensible.so/docs/sections-example-zip.md): Sections example: combining sections
+- [Advanced: Zip and flatten nested sections](https://docs.sensible.so/docs/sections-example-copy-from-sections.md): Sections example: flattening nested data
+- [Advanced: Transform sections data](https://docs.sensible.so/docs/sections-example-copy-to-section.md): Sections example: transforming section data
+- [Advanced: External anchors for sections](https://docs.sensible.so/docs/sections-example-external-range.md): Sections example: using external anchors
+- [Conditional execution](https://docs.sensible.so/docs/conditional.md): Conditionally execute SenseML
+- [Spreadsheet extraction](https://docs.sensible.so/docs/cell-rows.md): Extract from large spreadsheets
+- [Config settings](https://docs.sensible.so/docs/config-settings.md): SenseML configuration options
+- [Fingerprint](https://docs.sensible.so/docs/fingerprint.md): Document fingerprinting for classification
+- [Verbosity](https://docs.sensible.so/docs/verbosity.md): Control extraction output detail
+- [Document type settings](https://docs.sensible.so/docs/document-type-settings.md): Configure document type behavior
+- [Document type descriptions](https://docs.sensible.so/docs/descriptions.md): Describe document types for classification
+- [Fingerprint mode](https://docs.sensible.so/docs/fingerprint-mode.md): Configure fingerprint-based classification
+- [OCR engine](https://docs.sensible.so/docs/ocr-engine.md): Select OCR engine
+- [OCR level](https://docs.sensible.so/docs/ocr-level.md): Configure OCR processing level
+- [Advanced computed field methods](https://docs.sensible.so/docs/advanced-computed-field-methods.md): Advanced methods for transforming extracted data
+- [Add computed fields](https://docs.sensible.so/docs/add-computed-fields.md): Add computed fields to output
+- [Copy from sections](https://docs.sensible.so/docs/copy-from-sections.md): Copy data from sections
+- [Copy to section](https://docs.sensible.so/docs/copy-to-section.md): Copy data to sections
+- [Custom computation](https://docs.sensible.so/docs/custom-computation.md): Custom JsonLogic computations
+- [Custom computation group](https://docs.sensible.so/docs/custom-computation-group.md): Group custom computations
+- [Extra data](https://docs.sensible.so/docs/extra-data.md): Returns a value from an extra_data object you supply in an asynchronous extraction request. Use this method to bring request-time context into a config so validations, postprocessors, and computed fields can read it.
+- [Get file metadata](https://docs.sensible.so/docs/get-file-metadata.md): Extract file metadata
+- [Postprocessor](https://docs.sensible.so/docs/postprocessor.md): Transform extracted data into any arbitrary output schema
+- [Concepts](https://docs.sensible.so/docs/concepts.md): Core SenseML concepts
+- [Accuracy measures](https://docs.sensible.so/docs/accuracy-measures.md): Understanding extraction accuracy metrics
+- [Advanced LLM prompt configuration](https://docs.sensible.so/docs/prompt.md): Configure LLM prompts
+- [Anchor variables](https://docs.sensible.so/docs/anchor-nuances.md): Advanced anchor configuration
+- [DevOps platform](https://docs.sensible.so/docs/devops-platform.md): CI/CD integration for configs
+- [Environments](https://docs.sensible.so/docs/environments.md): Development and production environments
+- [Extraction coverage](https://docs.sensible.so/docs/coverage.md): Understanding extraction coverage
+- [Fallback fields](https://docs.sensible.so/docs/fallbacks.md): Configure fallback extraction
+- [Field extraction order](https://docs.sensible.so/docs/field-order.md): Control field extraction order
+- [JsonLogic extensions](https://docs.sensible.so/docs/jsonlogic.md): Custom JsonLogic operations
+- [Ligatures](https://docs.sensible.so/docs/ligatures.md): Handling ligature characters
+- [Lines](https://docs.sensible.so/docs/lines.md): Understanding text lines in PDFs
+- [LLM features overview](https://docs.sensible.so/docs/llm-features.md): Overview of LLM capabilities
+- [LLM models](https://docs.sensible.so/docs/llm-models.md): Available LLM models
+- [Match arrays](https://docs.sensible.so/docs/match-arrays.md): Working with match arrays
+- [OCR](https://docs.sensible.so/docs/ocr.md): Optical character recognition overview
+- [Section nuances](https://docs.sensible.so/docs/section-nuances.md): Advanced section configuration
+- [Source text traceability](https://docs.sensible.so/docs/color.md): Trace extracted data to source and use color highlights in example PDFs to more easily author SenseML
+- [Supported file types](https://docs.sensible.so/docs/file-types.md): Supported document file formats
+- [Table methods](https://docs.sensible.so/docs/table-methods.md): Comparison of table extraction methods
+- [Intelligent document processing](https://docs.sensible.so/docs/idp.md): Intelligent document processing with Sensible
+- [Image processing](https://docs.sensible.so/docs/images.md): Extract non-text images and image data from documents
+
+## API Reference
+- [API Introduction](https://docs.sensible.so/reference/choosing-an-endpoint.md)
+- [Authentication](https://docs.sensible.so/reference/authentication.md)
+- [Extract data from a document (sync)](https://docs.sensible.so/reference/extract-data-from-a-document.md): **Note:** Use this endpoint for testing. Use the asynchronous extraction endpoints when in production.  Extract data from a local document synchronously.  To explore this endpoint, use this interactive API reference, or use one of the following options:  - For a quick "hello world" response to this endpoint, see the [API quickstart](doc:quickstart) - For a step-by-step tutorial about calling this endpoint, see [Try synchronous extraction](doc:api-tutorial-sync). - Run this endpoint in the Sensible Postman collection.   [![Run in Postman](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/16839934-45339059-3fec-4c31-a891-9a12a3e1c22b?action=collection%2Ffork&collection-url=entityId%3D16839934-45339059-3fec-4c31-a891-9a12a3e1c22b%26entityType%3Dcollection%26workspaceId%3Ddbde09dc-b7dd-487d-a68f-20d32b008f90)  There are two options for posting the document bytes.   1. (often preferred) specify the non-encoded document bytes as the entire request body,and specify the `Content-Type` header, for example,"application/pdf" or "image/jpeg".      See the following for supported file formats.   2. Base64 encode the document bytes, specify them in a body "document" field, and specify application/json for the `Content-Type` header.  For a list of  supported document file types, see [Supported file types](doc:file-types).  To get additional information about an extraction initiated with this endpoint, including signed download URLs and the error message for failed extractions, retrieve it via [GET /documents/{id}](ref:retrieving-results).
+- [Extract doc at a Sensible URL](https://docs.sensible.so/reference/generate-an-upload-url.md): Extract data asynchronously from a document with the following steps:   1. Use this endpoint to generate a Sensible URL.   2. PUT your document at the `upload_url` returned from the previous step. Sensible extracts data from the document.   3. To retrieve the extraction, use a webhook, or use the extraction `id` returned in the response to poll the GET documents/{id} endpoint.  For supported file size and types, see [Supported file types](doc:file-types).  For example, if your call to `/generate_upload_url` specifies the document type with a `content_type` body parameter (recommended), your first two steps are as follows:  Step 1. Generate the Sensible URL:  ```curl curl --location 'https://api.sensible.so/v0/generate_upload_url/<YOUR_DOCUMENT_TYPE>' \ --header 'Content-Type: application/json' \ --header 'Accept: application/json' \ --header 'Authorization: Bearer REDACTED' \ --data '{"content_type":"application/pdf"}' ```  Step 2. PUT the document:  ```curl curl --location --request PUT 'https://sensible-so-utility-bucket-dev-us-west-2.s3.us-west-2.amazonaws.com/REDACTED' \ --header 'Content-Type: application/pdf' \ --data 'YOUR_PATH_TO_DOCUMENT.pdf' ```  Note that in step 2:   - you must omit an authorization header   - the `Content-Type` header must match the `content_type` body parameter in step 1   - the pre-signed `upload_url` doesn't support Base64 encoded documents, so you PUT the document bytes directly to the endpoint.   For a step-by-step tutorial on calling this endpoint, see [Try asynchronous extraction from a Sensible URL](https://docs.sensible.so/docs/api-tutorial-async-2).
+- [Extract doc at your URL](https://docs.sensible.so/reference/extract-from-url.md): Extract data asynchronously from a document at the specified `document_url`.<br/> For supported file size and types, see [Supported file types](doc:file-types). Take the following steps. 1. Run this endpoint. Sensible recommends including `content_type` body parameter:  ```curl curl --location 'https://api.sensible.so/v0/extract_from_url/<YOUR_DOCUMENT_TYPE>' \ --header 'Content-Type: application/json' \ --header 'Accept: application/json' \ --header 'Authorization: Bearer REDACTED' \ --data '{"document_url": "YOUR_DOC_URL", content_type":"application/pdf"}' ```  3. To retrieve the extraction, use a webhook, or use the extraction `id` returned in the  response to poll the GET documents/{id} endpoint. For a step-by-step tutorial on calling this endpoint, see [Try asynchronous extraction from your URL](doc:api-tutorial-async-1).
+- [Extract data from a document using specified config](https://docs.sensible.so/reference/extract-data-from-a-document-with-config.md): This endpoint's behavior identical to the [Extract data from a document](ref:extract-data-from-a-document) endpoint's behavior, except that Sensible uses the specified config to extract data from the document instead of automatically choosing the best-scoring extraction in the document type.
+- [Extract doc at a Sensible URL using specified config](https://docs.sensible.so/reference/generate-an-upload-url-with-config.md): This endpoint's behavior is identical to the [Extract doc at a Sensible URL](ref:generate-an-upload-url) endpoint's behavior, except that Sensible uses the specified config to extract data from the document instead of automatically choosing the best-scoring extraction in the document type.
+- [Extract doc at your URL using config](https://docs.sensible.so/reference/provide-a-download-url-with-config.md): This endpoint's behavior is identical to the [Extract doc at your URL](ref:extract-from-url) endpoint's behavior, except that Sensible uses the specified config to extract data from the document instead of automatically choosing the best-scoring extraction in the document type.
+- [Extract portfolio at a Sensible URL](https://docs.sensible.so/reference/generate-an-upload-url-for-a-pdf-portfolio.md): Use this endpoint with multiple documents that are packaged into one file (a "portfolio"). For a list of supported file types, see [Supported file types](doc:file-types). Segments a portfolio file into the specified document types (for example, 1099, w2, and bank_statement) and then runs extractions asynchronously for each document Sensible finds in the portfolio.  Take the following steps - 1. Use this endpoint to generate a Sensible URL. 2. PUT the document you want to extract data from at the URL, where `SENSIBLE_UPLOAD_URL` is the URL you received from this endpoint's response. For more information about how to PUT the document, see the [generate_upload_url/{document_type}](ref:generate-an-upload-url) endpoint. 3. To retrieve the extraction, use a webhook, or use the extraction `id` returned in the  response to poll the GET documents/{id} endpoint. For more about extracting from portfolios, see [Multi-document extractions](doc:portfolio).
+- [Extract portfolio at your URL](https://docs.sensible.so/reference/provide-a-download-url-for-a-pdf-portfolio.md): Use this endpoint with multiple documents that are packaged into one file (a "portfolio"). For a list of supported file types, see [Supported file types](doc:file-types). Segments a portfolio file at the specified `document_url` into the specified document types (for example, 1099, w2, and bank_statement) and then runs extractions asynchronously for each document Sensible finds in the portfolio. Take the following steps. 1. Run this endpoint. 3. To retrieve the extraction, use a webhook, or use the extraction `id` returned in the  response to poll the GET documents/{id} endpoint. For more about extracting from portfolios, see [Multi-document extractions](doc:portfolio).
+- [Retrieve extraction by ID](https://docs.sensible.so/reference/retrieving-results.md): Use this endpoint in conjunction with asynchronous extraction requests to retrieve your results. You can also use this endpoint to retrieve the results for documents extractions from the synchronous /extract endpoint. To poll extraction status, check the `status` field in this endpoint's response. When the extraction completes, the returned status is `COMPLETE` and the response includes results in the `parsed_document` field.  For fields in the extraction for which Sensible couldn't find a value, Sensible returns null.
+- [List extractions](https://docs.sensible.so/reference/list-extractions.md): Use this endpoint to get a filtered list of past extractions. This endpoint returns a summary for each extraction, listed in reverse chronological order.  To get details about an extraction, use the [Retrieve extraction by ID](ref:retrieving-results) endpoint. This endpoint uses keyset pagination to retrieve the next page of results. By default it returns a first page of 20 extractions and an opaque `continuation_token` that you can pass in the next request to get the next page of results, until the endpoint returns `continuation_token` to indicate the last page.  Use the `limit` parameter to configure page size.
+- [Get extraction statistics](https://docs.sensible.so/reference/statistics.md): Returns daily extraction coverage statistics as a `coverage_histogram` per config.  Sensible returns coverage for each config that was used for at least one extraction performed in the specified environments  in the specified time period. For more information about coverage, see [Monitoring extractions](doc:metrics). For more information about the returned `coverage_histogram`, see the response model.
+- [Get Excel extraction](https://docs.sensible.so/reference/get-excel-extraction.md): You can use this endpoint to get Excel files from documents, for example from PDFs. In more detail, this endpoint converts your JSON document extraction to an Excel spreadsheet. To compile multiple documents into one Excel file, specify the IDs of their recent extractions in the request separated by commas, for example, `/generate_excel/867514cc-fce7-40eb-8e9d-e6ec48cdac34,5093c65f-05bd-46a3-8df7-da3ed00f6d35`. For the best compiled spreadsheet results, configure your SenseML so that the documents output identically named fields. For more information about the conversion process, see [SenseML to spreadsheet reference](doc:excel-reference).  For portfolio extractions, Sensible returns an Excel file containing fields for all the documents it finds in the PDF. For more information, see [Multi-document spreadsheet](doc:excel-reference#multi-document-spreadsheet).  For a list of document file types that Sensible can extract data from, see [Supported file types](doc:file-types). Call this endpoint after an extraction completes. For more information about checking extraction status, see the `GET /documents/{id}` endpoint.
+- [Get CSV extraction](https://docs.sensible.so/reference/get-csv-extraction.md): You can use this endpoint to get CSV files from documents, for example, from PDFs. In more detail, this endpoint converts your JSON document extraction to a comma-separated values. To compile multiple documents into one CSV file, specify the IDs of their recent extractions in the request separated by commas, for example, `/generate_csv/867514cc-fce7-40eb-8e9d-e6ec48cdac34,5093c65f-05bd-46a3-8df7-da3ed00f6d35`. For the best compiled spreadsheet results, configure your SenseML so that the documents output identically named fields. For more information about the conversion process, see [SenseML to spreadsheet reference](doc:excel-reference). For a list of document file types that Sensible can extract data from, see [Supported file types](doc:file-types). Call this endpoint after an extraction completes. For more information about checking extraction status, see the `GET /documents/{id}` endpoint.
+- [Get token for review link](https://docs.sensible.so/reference/account-auth-tokens.md): Use this endpoint to provide a [reviewer](doc:human-review) with a "magic link" they can use to  approve, reject, and edit extracted document data without logging into a Sensible account.  This endpoint's response includes an authorization token you can use to compose the magic link.  For information about implementing human review, see [Human review implementation](doc:human-review-implementation). For example, for an extraction id `b84bd1c8-113e-4e1e-8462-379f0dde2abf`, make the following request:  ```curl curl --location 'https://api.sensible.so/v0/account/auth_tokens' \ --header 'Content-Type: application/json' \ --header 'Authorization: Bearer YOUR_API_KEY' \ --data '{     "grants": [         {             "route": "/documents/{id}",             "method": "GET",             "path": {                 "id": "b84bd1c8-113e-4e1e-8462-379f0dde2abf"             }         },         {             "route": "/extractions/{id}",             "method": "PUT",             "path": {                 "id": "b84bd1c8-113e-4e1e-8462-379f0dde2abf"             }         }     ],     "expires": "2025-01-15T22:14:35.720Z" }'  ```
+- [Classify document by type](https://docs.sensible.so/reference/classify-document.md): Classify a document into one of the document types you defined in your Sensible account. For more information, see [Classifying documents by type](doc:classify). To retrieve document's classification, poll the `download_link` in this endpoint's response until it returns a non-error response.  Use this endpoint:   - In an extraction workflow. For example, determine which documents to extract prior to calling a Sensible extraction endpoint.  - Outside an extraction workflow. For example, determine where to route each document or to label each document in a system of record.  To post the document bytes, specify the non-encoded document bytes as the entire request body,and specify the `Content-Type` header, for example,"application/pdf" or "image/jpeg".  For supported file size and types, see [Supported file types](doc:file-types).
+- [Classify document by type (sync)](https://docs.sensible.so/reference/classify-document-sync.md): **Note:** Use this Classify endpoint for testing. Use the asynchronous Classify endpoint for production.  Classify a document into one of the document types you defined in your Sensible account. For more information, see [Classifying documents by type](doc:classify).  Use this endpoint:   - In an extraction workflow. For example, determine which documents to extract prior to calling a Sensible extraction endpoint.  - Outside an extraction workflow. For example, determine where to route each document or to label each document in a system of record.  To post the document bytes, specify the non-encoded document bytes as the entire request body,and specify the `Content-Type` header, for example,"application/pdf" or "image/jpeg".  For supported file size and types, see [Supported file types](doc:file-types).
+- [List document types](https://docs.sensible.so/reference/list-document-types.md): Lists all document types in your Sensible account.
+- [Create document type](https://docs.sensible.so/reference/create-document-type.md): Create a document type.
+- [Get document type](https://docs.sensible.so/reference/get-document-type.md): Find the document type id using the `/document_types` endpoint.
+- [Update document type](https://docs.sensible.so/reference/update-document-type.md): Update an existing document type with new information. For example, use this endpoint to add validations:  ```curl curl --location --request PUT 'https://api.sensible.so/v0/document_types/<TYPE_ID>' \ --header 'Authorization: Bearer YOUR_API_KEY' \ --header 'Content-Type: application/json' \ --data-raw '{"schema":{"validations":[{"description":"example validation to test broker email format","condition":{"match":[{"var":"broker\\.email.value"},"^\\S+\\@\\S+$"]},"severity":"warning","fields":["test"]}]}} ' ```
+- [Delete document type](https://docs.sensible.so/reference/delete-document-type.md): Delete a document type and everything it contains, for example configurations and reference PDfs, but not its extraction history displayed in the Sensible app.
+- [List configurations in a document type](https://docs.sensible.so/reference/list-configurations.md): List configurations in a document type.
+- [Create configuration in a document type](https://docs.sensible.so/reference/create-configuration.md): Pass the configuration as stringified JSON.
+- [Get configuration](https://docs.sensible.so/reference/get-configuration.md): Get a configuration as stringified JSON.
+- [Update configuration](https://docs.sensible.so/reference/update-configuration.md): Replace a published or draft version of the configuration.
+- [Delete configuration](https://docs.sensible.so/reference/delete-configuration.md): Delete a configuration and its versions.
+- [List versions for a configuration](https://docs.sensible.so/reference/get-configuration-versions.md): Get the version ids for a configuration.
+- [Get configuration by version](https://docs.sensible.so/reference/get-configuration-by-version.md): Get a configuration as stringified JSON by version id.
+- [Publish configuration to an environment](https://docs.sensible.so/reference/publish-configuration-by-version.md): To publish to an environment instead of as the current draft, the configuration must be valid according to this [schema](https://schema.sensible.so/configuration.schema.json).
+- [Delete draft or unpublish configuration](https://docs.sensible.so/reference/delete-configuration-by-version.md): To delete a draft, specify a version name in the `version` parameter. To unpublish a configuration, enter the publication environment name in the `version` parameter, for example, `development`.
+- [List all reference documents in a document type](https://docs.sensible.so/reference/list-reference-documents.md): List all reference documents in a document type
+- [Create reference document](https://docs.sensible.so/reference/create-reference-document.md): Specify document metadata in the request, and get back an `upload_url` at which to put the PDF, for example with `curl -T ./sample.pdf`.
+- [Get reference document metadata](https://docs.sensible.so/reference/get-reference-document.md): Get download URL and other metadata for a reference document.
+- [Update metadata for a reference document](https://docs.sensible.so/reference/update-reference-document.md): Update metadata for a reference document
+- [Delete reference document](https://docs.sensible.so/reference/delete-reference-document.md): Delete a reference document and break associations to any configs.
+- [Unassociate reference document from configuration](https://docs.sensible.so/reference/delete-reference-document-association.md): Break the association between a reference document and its configuration.
+- [Extract all text from reference document](https://docs.sensible.so/reference/extract-all-text-from-reference-document.md): Get all the text (lines) for a reference document as standardized output. The output is an array of pages with metadata such as text positioning. If you specify a configuration, Sensible uses preprocessors defined in the configuration to process the text.
+- [MCP](https://docs.sensible.so/reference/mcp.md)
+- [List email processors](https://docs.sensible.so/reference/list-email-processors.md): Lists all active email processors in your Sensible account. An email processor defines how Sensible extracts data from emails sent to a dedicated address. For more information, see [Getting started with email extraction](doc:getting-started-email).
+- [Get email processor](https://docs.sensible.so/reference/get-email-processor.md): Retrieves an email processor by name.
+- [Create or update email processor](https://docs.sensible.so/reference/upsert-email-processor.md): Creates an email processor with the specified name, or updates it if one already exists. Specify the document types Sensible extracts from the email body and attachments, and the webhooks that receive extraction results.  When updating an existing processor, you can replace any combination of `webhooks`, `bodySpec`, and `attachmentSpecs`. The URL path sets the processor name and you cannot change it after creation. To rename a processor, delete it and create a new one under the desired name.  After you create a processor, send emails to the processor's email address to trigger extraction. Find a processor's email addresses by clicking the processor in the **Email processors** tab of the Sensible app. To route emails to the [development-environment](doc:environments) webhook instead, use the `development.` prefix on the processor's email address: `development.{email_address}`. For more information, see [Getting started with email extraction](doc:getting-started-email).
+- [Delete email processor](https://docs.sensible.so/reference/delete-email-processor.md): Deletes an email processor. If no processor with the given name exists, Sensible takes no action.
+
+## Changelog
+- [August 2026](https://docs.sensible.so/changelog/august-2026.md)
+- [July 2026](https://docs.sensible.so/changelog/july-2026.md)
+- [June 2026](https://docs.sensible.so/changelog/june-2026.md)
+- [May 2026](https://docs.sensible.so/changelog/may-2026.md)
+- [April 2026](https://docs.sensible.so/changelog/april-2026.md)
+- [March 2026](https://docs.sensible.so/changelog/march-2026.md)
+- [February 2026](https://docs.sensible.so/changelog/february-2026.md)
+- [January 2026](https://docs.sensible.so/changelog/january-2026.md)
+- [December 2025](https://docs.sensible.so/changelog/december-2025.md)
+- [November 2025](https://docs.sensible.so/changelog/november-2025.md)

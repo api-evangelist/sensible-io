@@ -1,0 +1,223 @@
+{
+  "item": [
+    {
+      "id": "fc3c8812-8112-40b2-9966-88e2c606b1f2",
+      "name": "Upload",
+      "description": {
+        "content": "Generate upload URLs for documents",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "44cb1199-0bc4-409b-ae9d-f023acf33f7a",
+          "name": "Generate an upload URL for a document",
+          "request": {
+            "name": "Generate an upload URL for a document",
+            "description": {},
+            "url": {
+              "path": [
+                "generate_upload_url",
+                ":document_type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "document_type",
+                  "description": "(Required) Document type identifier"
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "95ae8ec7-2d21-4a83-aac7-4a353608404a",
+              "name": "Upload URL response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "generate_upload_url",
+                    ":document_type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "document_type",
+                      "description": "(Required) Document type identifier"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ea125e52-0ba4-4265-997d-2ad94d354c27",
+          "name": "Generate an upload URL for a document with a specific config",
+          "request": {
+            "name": "Generate an upload URL for a document with a specific config",
+            "description": {},
+            "url": {
+              "path": [
+                "generate_upload_url",
+                ":document_type",
+                ":config_name"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "document_type",
+                  "description": "(Required) Document type identifier"
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "config_name",
+                  "description": "(Required) Config name"
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "93ef099e-7147-4992-9bf6-d6db2b9b17c9",
+              "name": "Upload URL response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "generate_upload_url",
+                    ":document_type",
+                    ":config_name"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "document_type",
+                      "description": "(Required) Document type identifier"
+                    },
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "config_name",
+                      "description": "(Required) Config name"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.sensible.so/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e6f3be50-679e-4d54-ab54-a72eb004eb48",
+    "name": "Sensible REST Account Upload API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).\n\nContact Support:\n Name: Sensible",
+      "type": "text/plain"
+    }
+  }
+}

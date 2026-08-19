@@ -1,0 +1,108 @@
+{
+  "item": [
+    {
+      "id": "ee0a9768-3b0c-4de3-947e-977c4c7da8df",
+      "name": "Account",
+      "description": {
+        "content": "Account-related resources",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7068e54b-8e27-4080-945f-b0490ea5d577",
+          "name": "List account auth tokens",
+          "request": {
+            "name": "List account auth tokens",
+            "description": {},
+            "url": {
+              "path": [
+                "account",
+                "auth_tokens"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5bd92b7b-4724-4c7c-9f19-2d66db5c7142",
+              "name": "Array of tokens",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "account",
+                    "auth_tokens"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.sensible.so/v0",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c26c51c4-532a-49d5-b293-ba3aab896960",
+    "name": "Sensible REST Account API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).\n\nContact Support:\n Name: Sensible",
+      "type": "text/plain"
+    }
+  }
+}

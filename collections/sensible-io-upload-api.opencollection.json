@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sensible REST Account Upload API",
+    "version": "0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Upload",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Generate an upload URL for a document",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/generate_upload_url/:document_type",
+            "params": [
+              {
+                "name": "document_type",
+                "value": "",
+                "type": "path",
+                "description": "Document type identifier"
+              }
+            ]
+          },
+          "docs": "Generate an upload URL for a document"
+        },
+        {
+          "info": {
+            "name": "Generate an upload URL for a document with a specific config",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/generate_upload_url/:document_type/:config_name",
+            "params": [
+              {
+                "name": "document_type",
+                "value": "",
+                "type": "path",
+                "description": "Document type identifier"
+              },
+              {
+                "name": "config_name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              }
+            ]
+          },
+          "docs": "Generate an upload URL for a document with a specific config"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

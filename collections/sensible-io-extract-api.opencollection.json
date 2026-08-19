@@ -1,0 +1,128 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Sensible REST Account Extract API",
+    "version": "0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Extract",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Extract data from a document (default config)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/extract/:document_type",
+            "params": [
+              {
+                "name": "document_type",
+                "value": "",
+                "type": "path",
+                "description": "Document type identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Extract data from a document (default config)"
+        },
+        {
+          "info": {
+            "name": "Extract data from a document using a specific config",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/extract/:document_type/:config_name",
+            "params": [
+              {
+                "name": "document_type",
+                "value": "",
+                "type": "path",
+                "description": "Document type identifier"
+              },
+              {
+                "name": "config_name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Extract data from a document using a specific config"
+        },
+        {
+          "info": {
+            "name": "Extract from a URL-hosted document (default config)",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/extract_from_url/:document_type",
+            "params": [
+              {
+                "name": "document_type",
+                "value": "",
+                "type": "path",
+                "description": "Document type identifier"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Extract from a URL-hosted document (default config)"
+        },
+        {
+          "info": {
+            "name": "Extract from a URL-hosted document using a specific config",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.sensible.so/v0/extract_from_url/:document_type/:config_name",
+            "params": [
+              {
+                "name": "document_type",
+                "value": "",
+                "type": "path",
+                "description": "Document type identifier"
+              },
+              {
+                "name": "config_name",
+                "value": "",
+                "type": "path",
+                "description": "Config name"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Extract from a URL-hosted document using a specific config"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
