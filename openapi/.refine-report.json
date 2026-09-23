@@ -1,14 +1,7 @@
 {
   "provider": "sensible-io",
   "sources": [
-    "sensible-io-account-api-openapi.yml",
-    "sensible-io-classify-api-openapi.yml",
-    "sensible-io-configs-api-openapi.yml",
-    "sensible-io-document-types-api-openapi.yml",
-    "sensible-io-documents-api-openapi.yml",
-    "sensible-io-extract-api-openapi.yml",
-    "sensible-io-reference-documents-api-openapi.yml",
-    "sensible-io-upload-api-openapi.yml"
+    "_original/sensible-io-openapi.yml"
   ],
   "outputs": [
     "sensible-io-account-api-openapi.yml",
@@ -23,6 +16,19 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "sensible-io-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "sensible-io-account-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sensible-io-classify-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sensible-io-configs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sensible-io-document-types-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sensible-io-documents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sensible-io-extract-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sensible-io-reference-documents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "sensible-io-upload-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

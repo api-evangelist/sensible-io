@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Sensible REST Account Configs API
+  title: Sensible REST Configs API
   description: 'REST API for document understanding: extract, classify, fill, generate, and manage document types, configs, reference documents, and extractions. Authenticated with a bearer token (API key).'
   version: '0'
   contact:
@@ -118,13 +118,6 @@ paths:
           description: Published
 components:
   parameters:
-    ConfigNamePath:
-      in: path
-      name: name
-      required: true
-      schema:
-        type: string
-      description: Config name
     TypeId:
       in: path
       name: type_id
@@ -132,6 +125,13 @@ components:
       schema:
         type: string
       description: Document type ID
+    ConfigNamePath:
+      in: path
+      name: name
+      required: true
+      schema:
+        type: string
+      description: Config name
   securitySchemes:
     bearerAuth:
       type: http
