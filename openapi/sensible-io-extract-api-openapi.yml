@@ -111,6 +111,21 @@ components:
           enum:
           - production
           - development
+  parameters:
+    DocumentType:
+      in: path
+      name: document_type
+      required: true
+      schema:
+        type: string
+      description: Document type identifier
+    ConfigName:
+      in: path
+      name: config_name
+      required: true
+      schema:
+        type: string
+      description: Config name
   responses:
     ExtractResponse:
       description: Extraction response
@@ -125,21 +140,6 @@ components:
                 type: string
               parsed_document:
                 type: object
-  parameters:
-    ConfigName:
-      in: path
-      name: config_name
-      required: true
-      schema:
-        type: string
-      description: Config name
-    DocumentType:
-      in: path
-      name: document_type
-      required: true
-      schema:
-        type: string
-      description: Document type identifier
   securitySchemes:
     bearerAuth:
       type: http

@@ -118,13 +118,6 @@ paths:
           description: Published
 components:
   parameters:
-    TypeId:
-      in: path
-      name: type_id
-      required: true
-      schema:
-        type: string
-      description: Document type ID
     ConfigNamePath:
       in: path
       name: name
@@ -132,6 +125,13 @@ components:
       schema:
         type: string
       description: Config name
+    TypeId:
+      in: path
+      name: type_id
+      required: true
+      schema:
+        type: string
+      description: Document type ID
   securitySchemes:
     bearerAuth:
       type: http
