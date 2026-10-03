@@ -86,31 +86,6 @@ paths:
         '200':
           $ref: '#/components/responses/ExtractResponse'
 components:
-  schemas:
-    ExtractRequest:
-      type: object
-      properties:
-        document_url:
-          type: string
-          format: uri
-        environment:
-          type: string
-          enum:
-          - production
-          - development
-    ExtractFromUrlRequest:
-      type: object
-      properties:
-        document_url:
-          type: string
-          format: uri
-        document_name:
-          type: string
-        environment:
-          type: string
-          enum:
-          - production
-          - development
   parameters:
     DocumentType:
       in: path
@@ -140,6 +115,31 @@ components:
                 type: string
               parsed_document:
                 type: object
+  schemas:
+    ExtractRequest:
+      type: object
+      properties:
+        document_url:
+          type: string
+          format: uri
+        environment:
+          type: string
+          enum:
+          - production
+          - development
+    ExtractFromUrlRequest:
+      type: object
+      properties:
+        document_url:
+          type: string
+          format: uri
+        document_name:
+          type: string
+        environment:
+          type: string
+          enum:
+          - production
+          - development
   securitySchemes:
     bearerAuth:
       type: http
