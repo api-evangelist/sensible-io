@@ -87,13 +87,6 @@ paths:
           $ref: '#/components/responses/ExtractResponse'
 components:
   parameters:
-    DocumentType:
-      in: path
-      name: document_type
-      required: true
-      schema:
-        type: string
-      description: Document type identifier
     ConfigName:
       in: path
       name: config_name
@@ -101,6 +94,38 @@ components:
       schema:
         type: string
       description: Config name
+    DocumentType:
+      in: path
+      name: document_type
+      required: true
+      schema:
+        type: string
+      description: Document type identifier
+  schemas:
+    ExtractFromUrlRequest:
+      type: object
+      properties:
+        document_url:
+          type: string
+          format: uri
+        document_name:
+          type: string
+        environment:
+          type: string
+          enum:
+          - production
+          - development
+    ExtractRequest:
+      type: object
+      properties:
+        document_url:
+          type: string
+          format: uri
+        environment:
+          type: string
+          enum:
+          - production
+          - development
   responses:
     ExtractResponse:
       description: Extraction response
@@ -115,31 +140,6 @@ components:
                 type: string
               parsed_document:
                 type: object
-  schemas:
-    ExtractRequest:
-      type: object
-      properties:
-        document_url:
-          type: string
-          format: uri
-        environment:
-          type: string
-          enum:
-          - production
-          - development
-    ExtractFromUrlRequest:
-      type: object
-      properties:
-        document_url:
-          type: string
-          format: uri
-        document_name:
-          type: string
-        environment:
-          type: string
-          enum:
-          - production
-          - development
   securitySchemes:
     bearerAuth:
       type: http

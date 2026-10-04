@@ -40,13 +40,6 @@ paths:
           description: Upload URL response
 components:
   parameters:
-    DocumentType:
-      in: path
-      name: document_type
-      required: true
-      schema:
-        type: string
-      description: Document type identifier
     ConfigName:
       in: path
       name: config_name
@@ -54,6 +47,13 @@ components:
       schema:
         type: string
       description: Config name
+    DocumentType:
+      in: path
+      name: document_type
+      required: true
+      schema:
+        type: string
+      description: Document type identifier
   securitySchemes:
     bearerAuth:
       type: http
